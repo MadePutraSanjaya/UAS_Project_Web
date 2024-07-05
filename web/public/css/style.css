@@ -1,0 +1,266 @@
+/* DESKTOP VERSION */
+/* @media (min-width: 992px) {} */
+.btn {
+    background-color: #FE7600;
+}
+
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+.jumbotron {
+    background-image: url(../images/image1.png);
+    background-size: cover;
+    height: 720px;
+    text-align: center;
+    position: relative;
+    margin-top: -75px;
+    position: relative;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.nav-link:hover::after {
+    content: '';
+    border-bottom: 3px solid #FE7600;
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+.navbar-brand, .nav-link {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    color: white !important;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-family: noto sans balinese;
+    font-size: 20px;
+}
+
+
+.navbar1-brand {
+    font-size: 20px;
+}
+
+
+/* Discover Section */
+#discover {
+padding: 100px 0;
+}
+
+h2 {
+font-size: 50px;
+font-weight: 500;
+}
+
+.sub-title {
+font-size: 20px;
+color: grey;
+}
+
+.card-layanan {
+width: 100%;
+height: 154px;
+border-radius: 5px;
+padding: 40px;
+}
+
+.circle-icon {
+width: 68px;
+height: 68px;
+background-color: #EFEFEF;
+border-radius: 50%;
+}
+
+.card-layanan p {
+color: grey;
+}
+
+/* reccomend */
+.reccomend {
+margin-top: 150px;
+}
+
+.reccomend h3 {
+font-size: 39px;
+font-weight: 500;
+text-transform: uppercase;
+margin-top: 30px;
+}
+
+.reccomend h3 span {
+color: #FE7600;
+}
+
+.reccomend p {
+color: grey;
+}
+
+.section1 {
+background-color: #F6F7FB;
+
+}
+
+.card {
+position: relative;
+border: none;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card-img-overlay {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 20px;
+}
+.badge {
+background-color: #f0ad4e;
+font-size: 14px;
+padding: 5px 10px;
+border-radius: 5px;
+}
+.card-title {
+font-size: 24px;
+font-weight: bold;
+color: white;
+}
+.card-text {
+color: white;
+}
+.explore-btn {
+margin-top: 30px;
+text-align: center;
+}
+.explore-btn button {
+background-color: #f0ad4e;
+border: none;
+border-radius: 20px;
+padding: 10px 20px;
+color: white;
+font-size: 16px;
+}
+
+
+/* jumbotron */
+.jumbotron {
+position: relative;
+background: url('../images/Rectangle\ 72.png') no-repeat center center;
+background-size: cover;
+height: 641px;
+color: white;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.jumbotron h1 {
+font-size: 3rem;
+font-weight: bold;
+}
+.jumbotron p {
+font-size: 1.5rem;
+}
+.jumbotron .btn {
+background-color: #f0ad4e;
+border: none;
+border-radius: 20px;
+padding: 10px 20px;
+font-size: 16px;
+color: white;
+}
+
+
+/* maps */
+.map-container {
+height: 400px;
+position: relative;
+}
+
+.footer {
+background-color: #333;
+color: white;
+padding: 20px 0;
+}
+
+.footer a {
+color: white;
+}
+
+.footer a:hover {
+text-decoration: none;
+}
+
+.hero {
+background-image: url('../images/image1.png'); /* Replace with your image path */
+background-size: cover;
+background-position: center;
+color: white;
+text-align: center;
+padding: 150px 0;
+position: relative;
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.services {
+text-align: center;
+padding: 50px 0;
+}
+
+.service-icon {
+font-size: 40px;
+color: #007bff;
+margin-bottom: 20px;
+}
