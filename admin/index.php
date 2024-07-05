@@ -1,3 +1,19 @@
+<?php
+$host = 'localhost:8000';
+$dbname = 'uas'; 
+$username = 'root';
+$password = 'root'; 
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    var_dump($pdo);
+die();
+
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,15 +69,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/category.html" class="nav-link">
+            <a href="/admin/category.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Categories</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/travel.html" class="nav-link">
+            <a href="/admin/travel.html" class="nav-link">
               <i class="nav-icon fas fa-plane"></i>
               <p>Travel</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/discounts.html" class="nav-link">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Discounts</p>
             </a>
           </li>
         </ul>

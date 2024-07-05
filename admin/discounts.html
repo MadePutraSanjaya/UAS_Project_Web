@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel - AdminLTE 3</title>
+  <title>Discounts - AdminLTE 3</title>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Theme style -->
@@ -87,31 +87,33 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Travel List</h3>
+                <h3 class="card-title">Discount List</h3>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTravelModal">
-                    Add Travel
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addDiscountModal">
+                    Add Discount
                   </button>
                 </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="travelTable" class="table table-bordered table-hover">
+                <table id="discountTable" class="table table-bordered table-hover">
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Title</th>
-                      <th>Category</th>
+                      <th>Name</th>
                       <th>Description</th>
+                      <th>Expired At</th>
+                      <th>Percentage</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Beach Trip</td>
-                      <td>Beaches</td>
-                      <td>Relaxing trip to the Bahamas</td>
+                      <td>Summer Sale</td>
+                      <td>Discount for summer vacation packages</td>
+                      <td>2024-08-31</td>
+                      <td>10%</td>
                       <td>
                         <button class="btn btn-warning btn-sm edit-btn">Edit</button>
                         <button class="btn btn-danger btn-sm delete-btn">Delete</button>
@@ -119,9 +121,10 @@
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Mountain Hike</td>
-                      <td>Mountains</td>
-                      <td>Adventure in the Swiss Alps</td>
+                      <td>Winter Promotion</td>
+                      <td>Special discount for winter activities</td>
+                      <td>2024-12-31</td>
+                      <td>15%</td>
                       <td>
                         <button class="btn btn-warning btn-sm edit-btn">Edit</button>
                         <button class="btn btn-danger btn-sm delete-btn">Delete</button>
@@ -156,34 +159,33 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- Add Travel Modal -->
-<div class="modal fade" id="addTravelModal">
+<!-- Add Discount Modal -->
+<div class="modal fade" id="addDiscountModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Add New Travel</h4>
+        <h4 class="modal-title">Add New Discount</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="addTravelForm">
+      <form id="addDiscountForm">
         <div class="modal-body">
           <div class="form-group">
-            <label for="travelTitle">Travel Title</label>
-            <input type="text" class="form-control" id="travelTitle" name="travelTitle" required>
+            <label for="discountName">Discount Name</label>
+            <input type="text" class="form-control" id="discountName" name="discountName" required>
           </div>
           <div class="form-group">
-            <label for="travelCategory">Category</label>
-            <select class="form-control" id="travelCategory" name="travelCategory" required>
-              <option value="">Select Category</option>
-              <option value="1">Beaches</option>
-              <option value="2">Mountains</option>
-              <!-- Add more options as needed -->
-            </select>
+            <label for="discountDescription">Discount Description</label>
+            <textarea class="form-control" id="discountDescription" name="discountDescription" rows="3"></textarea>
           </div>
           <div class="form-group">
-            <label for="travelDescription">Travel Description</label>
-            <textarea class="form-control" id="travelDescription" name="travelDescription" rows="3"></textarea>
+            <label for="discountExpiredAt">Expired At</label>
+            <input type="date" class="form-control" id="discountExpiredAt" name="discountExpiredAt" required>
+          </div>
+          <div class="form-group">
+            <label for="discountPercentage">Percentage</label>
+            <input type="number" class="form-control" id="discountPercentage" name="discountPercentage" min="0" max="100" step="0.01" required>
           </div>
         </div>
         <div class="modal-footer justify-content-between">
@@ -207,22 +209,22 @@
 
 <script>
   $(document).ready(function() {
-    // Add Travel form submit
-    $('#addTravelForm').submit(function(e) {
+    // Add Discount form submit
+    $('#addDiscountForm').submit(function(e) {
       e.preventDefault();
       // Perform AJAX request or form submission logic here
-      alert('Travel added successfully.');
-      $('#addTravelModal').modal('hide');
+      alert('Discount added successfully.');
+      $('#addDiscountModal').modal('hide');
     });
 
     // Edit button click handler
-    $('#travelTable').on('click', '.edit-btn', function() {
+    $('#discountTable').on('click', '.edit-btn', function() {
       // Handle edit action here
       alert('Edit action triggered.');
     });
 
     // Delete button click handler
-    $('#travelTable').on('click', '.delete-btn', function() {
+    $('#discountTable').on('click', '.delete-btn', function() {
       // Handle delete action here
       $(this).closest('tr').remove();
       alert('Delete action triggered.');
