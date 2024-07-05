@@ -47,25 +47,25 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
           <li class="nav-item">
-            <a href="admin" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/category.html" class="nav-link">
+            <a href="category.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Categories</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/travel.html" class="nav-link">
+            <a href="travel.html" class="nav-link">
               <i class="nav-icon fas fa-plane"></i>
               <p>Travel</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/discounts.html" class="nav-link">
+            <a href="discounts.html" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
               <p>Discounts</p>
             </a>
